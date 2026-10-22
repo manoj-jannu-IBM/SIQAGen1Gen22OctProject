@@ -17,17 +17,18 @@
     <value name="DADA_GlobalVariable1">1.0</value>
     <value name="DADA_RefDataDocTypeTests">1.0</value>
     <value name="SSL_JDBC_Test">1.0</value>
+    <value name="JMS2waySSL">1.0</value>
   </record>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">12</value>
+  <value name="build">13</value>
   <null name="description"/>
   <value name="created_date">22-10-2026 08:51:14 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2026-10-22T09:14:28.286381406Z</value>
+  <value name="lastUpdated">2026-10-22T09:14:46.929962456Z</value>
   <value name="wmProjectId">fl2900992c8e01c8ff6a0390</value>
   <value name="creator">Manoj Jannu</value>
 </Values>
