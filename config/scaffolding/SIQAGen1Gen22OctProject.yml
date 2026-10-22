@@ -12,6 +12,7 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
 - name: WmSalesforceRESTProvider
+  version: 10.7.0.0.198
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
 services:
@@ -21,68 +22,182 @@ services:
     version: "1.0"
   - name: WmSalesforceProvider
     version: 10.7.0.0.71
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.198
+- serviceName: project.siqagen1gen22oct.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:SIQASFOAuthRestAccount
+  packages:
+  - name: SIQAGen1Gen22OctProject
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.198
+- serviceName: project.siqagen1gen22oct.integrations:SFBasicAuthSoap
+  packages:
+  - name: SIQAGen1Gen22OctProject
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.198
+- serviceName: project.siqagen1gen22oct.WmSalesforceProvider.com_softwareag_cloudstreams_salesforce_v53.operations.actions:SIQASFBasicAuthAction
+  packages:
+  - name: SIQAGen1Gen22OctProject
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.198
 configurationVariables:
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.retryCount
-  : "3"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.httpContentCharSet
-  : ISO-8859-1
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.userAgent
-  : Cloudstreams
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.tcpNoDelay
   : "false"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.timeoutType
-  : fixed
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.socketLinger
   : "-1"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.readTimeout
   : "180000"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.validateAfterInactivity
-  : "1000"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.blockTimeout
-  : "1000"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.minimumPoolSize
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.authorizationServerUrl
+  : https://login.salesforce.com/services/oauth2/authorize
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.poolIncrementSize
   : "1"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.idleTimeout
-  : "-1"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.allowCircularRedirects
-  : "true"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.followServerRedirects
-  : "true"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.startupBackoffSecs
-  : "10"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.rh.requestHeaderNames
-  : "Content-Type,SOAPAction"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.expireTimeout
-  : "1000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.startupRetryCount
+  : "0"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cr.preemptiveAuthEnabled
   : "false"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.hostnameVerifier
-  : org.apache.http.conn.ssl.DefaultHostnameVerifier
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.startupRetryCount
-  : "0"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.poolable
-  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.accessTokenRefreshURLRequest
+  : URL Query String
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.reuseAddr
+  : "false"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cr.username
   : rima.barman.b2b4497cd227@agentforce.com
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.sockBuffSize
-  : "8192"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.rh.requestHeaderValues
-  : "text/xml,login"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.sessionExpiry
-  : "14"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.maximumPoolSize
-  : "10"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.connectionEnabled
-  : "true"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.reuseAddr
   : "false"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.retryIfRequestSentOk
   : "true"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.providerUrl
-  : https://orgfarm-f511aefe02-dev-ed.develop.my.salesforce.com/services/Soap/u/53.0
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.expireTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.scope
+  : offline_access api refresh_token
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.connectionEnabled
+  : "true"
+  ? iscloudstreamsconnectorservice.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..operations..actions:SIQASFBasicAuthAction.virtualServiceName
+  : WmCloudStreams.SoapVS
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.authenticationServerUrl
+  : https://login.salesforce.com/services/oauth2/token
+  ? iscloudstreamsconnectorservice.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..operations..actions:SIQASFBasicAuthAction.connectionAlias
+  : project.siqagen1gen22oct.WmSalesforceProvider.com_softwareag_cloudstreams_salesforce_v53.connections:SIQASFBasicAuthAccount
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.enableCompression
+  : "false"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.serverRedirectMax
+  : "5"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.socketStaleCheck
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth.accessToken
+  : "{AES}dHW1JP6pNt3N5J6D4loNv0FAgIbNZikz91Oey6JuQfLg9nNJIUyPx5Jz/s/0X6Jky9eul8R9syVcQjEVEtwi5vdF4/7KOeLwFsLWcSpg9g13V6O1oaPTpoScEnJ8zluAky4zIB89Go9LgUhYbnbch2mK1wuN3U1rA1B0VhuZoUw="
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.userAgent
+  : Cloudstreams
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.socketStaleCheck
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.authorizationHeaderInTokenRefresh
+  : "false"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.readTimeout
+  : "30000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth.consumerSecret
+  : "{AES}AicILy8RyQFZ+0UWhsR8Et2hvNk13xGJI6AFcnbCu2j287dmuXi8hSkBMsBkYj3Si2a/NtjE1J31e6P02a6nQWmK1wuN3U1rA1B0VhuZoUw="
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.expireTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.refreshAccessToken
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.startupRetryCount
+  : "0"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.timeoutType
+  : auto
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.poolable
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.rh.requestHeaderValues
+  : "text/xml,login"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.connectionEnabled
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.poolable
+  : "true"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.enableSNI
   : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.minimumPoolSize
+  : "1"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.useChunking
+  : "false"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.accessTokenRefreshURL
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.useExpectCont
+  : "false"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.keepAliveInterval
+  : "300000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.httpContentCharSet
+  : ISO-8859-1
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.authorizationHeaderPrefix
+  : Bearer
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.timeoutType
+  : fixed
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.minimumPoolSize
+  : "1"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.sockBuffSize
+  : "8192"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth_v20.refreshToken
+  : "{AES}EQHy/XAuhQ5jza5ZKR2OX2aRG9b0kW9rPMXAkNSljzgsQVHUP6oWl21IzdJmxjTyG5/wpUEaX25O0N2KvUR4xBJAH+kkGCihHXguHLPhOkVRbsXyBebXXytmv/3IY8IJ"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.oauth.consumerId
+  : 3MVG97L7PWbPq6Uyep76O9fpPy2_uHcvG1f.M13oVezKgr7BCIES_ekum5zVVOtSUzassuRByKdQPlSLgiA5_
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.socketLinger
+  : "-1"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.maximumPoolSize
+  : "10"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.providerUrl
+  : https://orgfarm-f511aefe02-dev-ed.develop.my.salesforce.com
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.keepAliveInterval
+  : "300000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.retryIfRequestSentOk
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cr.password
+  : "{AES}pPysC3WeBHgd/E62MzqqikoBOx+n9Ygj7SkNDcrZTVwoNuL8+AOHInWNwNe2VzSv"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.connectTimeout
+  : "30000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.retryCount
+  : "3"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.validateAfterInactivity
+  : "1000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.blockTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.maximumPoolSize
+  : "10"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.allowCircularRedirects
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.followServerRedirects
+  : "true"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.rh.requestHeaderNames
+  : "Content-Type,SOAPAction"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.sockBuffSize
+  : "8192"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.retryCount
+  : "4"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.sessionExpiry
+  : "14"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.blockTimeout
+  : "1000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.providerUrl
+  : https://orgfarm-f511aefe02-dev-ed.develop.my.salesforce.com/services/Soap/u/53.0
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.startupBackoffSecs
+  : "10"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.tcpNoDelay
   : "false"
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.connectTimeout
   : "180000"
@@ -90,17 +205,11 @@ configurationVariables:
   : HTTP/1.1
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cr.authSchemeType
   : none
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.enableCompression
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.validateAfterInactivity
+  : "1000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cn.enableCompression
   : "false"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.serverRedirectMax
-  : "5"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cr.password
-  : "{AES}pPysC3WeBHgd/E62MzqqikoBOx+n9Ygj7SkNDcrZTVwoNuL8+AOHInWNwNe2VzSv"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.socketStaleCheck
-  : "true"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.pr.useExpectCont
-  : "false"
-  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.cn.keepAliveInterval
-  : "300000"
+  ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:SIQASFOAuthRestAccount.cx.grant_type
+  : refresh_token
   ? cloudstreamsconnection.project..siqagen1gen22oct..WmSalesforceProvider..com_softwareag_cloudstreams_salesforce_v53..connections:SIQASFBasicAuthAccount.poolIncrementSize
   : "1"
