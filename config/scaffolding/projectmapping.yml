@@ -1,0 +1,9 @@
+version: "1.0"
+projectName: SIQAGen1Gen22OctProject
+runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: fld_2018392959_stage00.projects.fl2900992c8e01c8ff6a0390.integrations:ClassicWMIOToDADA
+    type: flow
+    stepId: /0
+    reference: fld_2018392959_stage00.projects.fl2900992c8e01c8ff6a0390.WmPackageServiceProvider.jms2wayssl_publisher:jms2wayssl_publisher
